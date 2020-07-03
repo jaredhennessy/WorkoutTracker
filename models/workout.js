@@ -1,8 +1,7 @@
-const mongoose = require("mongoose");
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
 
-const Schema = mongoose.Schema;
-
-const trackerSchema = new Schema({
+var workoutSchema = new Schema({
   type: {
     type: String,
     trim: true,
@@ -35,6 +34,6 @@ const trackerSchema = new Schema({
   }
 });
 
-const Tracker = mongoose.model("Tracker", trackerSchema);
+var Workout = mongoose.model("Workout", workoutSchema);
 
-module.exports = Tracker;
+module.exports = Workout;

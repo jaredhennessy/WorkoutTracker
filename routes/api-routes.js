@@ -1,25 +1,28 @@
 const router = require("express").Router();
-const Tracker = require("../models/tracker.js");
-
-router.post("/api/workouts", ({ body }, res) => {
-  Tracker.create(body)
-    .then(dbTracker => {
-      res.json(dbTracker);
-    })
-    .catch(err => {
-      res.status(400).json(err);
-    });
-});
+const Workout = require("../models");
 
 router.get("/api/workouts", (req, res) => {
-  Tracker.find({})
-    .sort({ date: -1 })
-    .then(dbTracker => {
-      res.json(dbTracker);
+  Workout.find({})
+    .sort({ day: -1 })
+    .then(dbWorkout => {
+      res.json(dbWorkout);
     })
     .catch(err => {
       res.status(400).json(err);
     });
 });
+
+router.post("/api/workouts", ({ body }, res) => {
+  Workout.create(body)
+    .then(dbWorkout => {
+      res.json(dbWorkout);
+    })
+    .catch(err => {
+      res.status(400).json(err);
+    });
+});
+
+// router.get("/api/workouts/range", (req, res) => {
+// router.put("/api/workouts", (req, res) => {
 
 module.exports = router;
