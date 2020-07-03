@@ -8,7 +8,7 @@ an application for viewing, creating, and track daily workouts with Express, Mon
 
 ## Demo
 
-[URL](https://workouttrackerjhdemo.herokuapp.com/) / [video](https://drive.google.com/file/d/13tIxIYC-MLXryqSpNYmBOEu_HTPF9YuQ/view)
+[URL](https://workouttrackerjhdemo.herokuapp.com/) / [video](https://drive.google.com/file/d/1-YwQqa4iXDpELwH_k2RIeLpidgEuP6SS/view)
 
 ## Table of Contents
 
